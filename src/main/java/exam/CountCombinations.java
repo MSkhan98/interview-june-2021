@@ -3,25 +3,21 @@ package exam;
 public class CountCombinations {
 
   public int getNumberOfWays(final int total, final int k) {
- for(int i = 0; i < k; i++){  
-            int j, last;  
+    int tot;
+     if (k == 0 || total == 0)
+            return 0;
+ 
        
-            last = arr[arr.length-1];  
-          
-            for(j = arr.length-1; j > 0; j--){  
-                //Shift element of array by one  
-                arr[j] = arr[j-1];  
-            }  
-    
-            arr[0] = last;  
-        }  
-      
-        System.out.println();  
-          
-         
-        System.out.println("Array after right rotation: ");  
-        for(int i = 0; i< arr.length; i++){  
-            System.out.print(arr[i] + " ");  
+        if (tot[n - 1] > total)
+            return knapSack(total,tot, val, n - 1);
+ 
+        
+        else
+            return max(val[k - 1]
+                       + knapSack(W - wt[n - 1], wt,
+                                  val, n - 1),
+                       knapSack(W, wt, val, n - 1));
+    }
     return 0;
   }
 
